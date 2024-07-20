@@ -388,7 +388,7 @@ function card_element_bloodbowlstats(params, card_data, options) {
     return result;
 }
 
-function card_element_towstats(params, card_data, options) {
+function card_element_towstats_header(params, card_data, options) {
     var card_font_size_class = card_size_class(card_data, options);
 
     var result = "";
@@ -404,8 +404,28 @@ function card_element_towstats(params, card_data, options) {
     result += '      <th class="tow-card-stats-header">A</th>';
     result += '      <th class="tow-card-stats-header">Ld</th>';
     result += '    </tr>';
+    return result;
+}
+
+function card_element_towstats_footer(params, card_data, options) {
+    var card_font_size_class = card_size_class(card_data, options);
+
+    var result = "";
+    result += '  </tbody>';
+    result += '</table>';
+    return result;
+}
+
+function card_element_towstats(params, card_data, options) {
+    var card_font_size_class = card_size_class(card_data, options);
+
+    var result = "";
     result += '    <tr>';
-    result += '      <td class="card-stats-cell">' + params[0] + '</td>';
+    result += '    <td colspan="9">';
+    result += '      <h4 class="card-property-name">' + params[0] + '</h4>';
+    result += '    </td>';
+    result += '    </tr>';
+    result += '    <tr>';
     result += '      <td class="card-stats-cell">' + params[1] + '</td>';
     result += '      <td class="card-stats-cell">' + params[2] + '</td>';
     result += '      <td class="card-stats-cell">' + params[3] + '</td>';
@@ -414,13 +434,12 @@ function card_element_towstats(params, card_data, options) {
     result += '      <td class="card-stats-cell">' + params[6] + '</td>';
     result += '      <td class="card-stats-cell">' + params[7] + '</td>';
     result += '      <td class="card-stats-cell">' + params[8] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[9] + '</td>';
     result += '    </tr>';
-    result += '  </tbody>';
-    result += '</table>';
     return result;
 }
 
-function card_element_towweaponstats(params, card_data, options) {
+function card_element_towweaponstats_header(params, card_data, options) {
     var card_font_size_class = card_size_class(card_data, options);
 
     var result = "";
@@ -431,14 +450,33 @@ function card_element_towweaponstats(params, card_data, options) {
     result += '      <th class="tow-card-stats-header">AP</th>';
     result += '      <th class="tow-card-weapon-sr-stats-header">Special Rules</th>';
     result += '    </tr>';
+    return result;
+}
+
+function card_element_towweaponstats_footer(params, card_data, options) {
+    var card_font_size_class = card_size_class(card_data, options);
+
+    var result = "";
+    result += '  </tbody>';
+    result += '</table>';
+    return result;
+}
+
+function card_element_towweaponstats(params, card_data, options) {
+    var card_font_size_class = card_size_class(card_data, options);
+
+    var result = "";
     result += '    <tr>';
-    result += '      <td class="card-stats-cell">' + params[0] + '</td>';
+    result += '    <td colspan="4">';
+    result += '      <h4 class="card-property-name">' + params[0] + '</h4>';
+    result += '    </td>';
+    result += '    </tr>';
+    result += '    <tr>';
     result += '      <td class="card-stats-cell">' + params[1] + '</td>';
     result += '      <td class="card-stats-cell">' + params[2] + '</td>';
     result += '      <td class="card-stats-cell">' + params[3] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[4] + '</td>';
     result += '    </tr>';
-    result += '  </tbody>';
-    result += '</table>';
     return result;
 }
 
@@ -594,7 +632,11 @@ var card_element_generators = {
 	wh40k10eweaponstatsheader: card_element_40k10e_weapon_stats_header,
 	wh40k10eweaponstatsfooter: card_element_40k10e_weapon_stats_footer,
     towweaponstats: card_element_towweaponstats,
+    towweaponstatsheader: card_element_towweaponstats_header,
+    towweaponstatsfooter: card_element_towweaponstats_footer,
     towstats: card_element_towstats,
+    towstatsheader: card_element_towstats_header,
+    towstatsfooter: card_element_towstats_footer,
     towweaponstats: card_element_towweaponstats,
     bbstats: card_element_bloodbowlstats,
     p2e_stats: card_element_p2e_stats,
