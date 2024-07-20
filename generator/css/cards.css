@@ -269,10 +269,40 @@
     margin-bottom: 0;
 }
 
+.wh40k-weapon-card-stats-header {
+    text-align: center;
+    padding: 0;
+    width: 10%;
+}
+
+.wh40k-weapon-keywords-card-stats-header {
+    text-align: center;
+    padding: 0;
+    width: 40%;
+}
+
 .card-stats-header {
     text-align: center;
     padding: 0;
     width: 16.6%;
+}
+
+.tow-card-stats-header {
+    text-align: center;
+    padding: 0;
+    width: 11.1%;
+}
+
+.bb-card-stats-header {
+    text-align: center;
+    padding: 0;
+    width: 20%;
+}
+
+.tow-card-weapon-sr-stats-header {
+    text-align: center;
+    padding: 0;
+    width: 66.7%;
 }
 
 .card-stats-cell {

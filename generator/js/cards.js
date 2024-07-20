@@ -290,6 +290,158 @@ function card_element_dndstats(params, card_data, options) {
     return result;
 }
 
+function card_element_40k10e_stats(params, card_data, options) {
+    var card_font_size_class = card_size_class(card_data, options);
+
+    var result = "";
+    result += '<table class="card-stats' + card_font_size_class + '">';
+    result += '    <tbody><tr>';
+    result += '      <th class="card-stats-header">M</th>';
+    result += '      <th class="card-stats-header">T</th>';
+    result += '      <th class="card-stats-header">SC</th>';
+    result += '      <th class="card-stats-header">W</th>';
+    result += '      <th class="card-stats-header">LD</th>';
+    result += '      <th class="card-stats-header">OC</th>';
+    result += '    </tr>';
+    result += '    <tr>';
+    result += '      <td class="card-stats-cell">' + params[0] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[1] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[2] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[3] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[4] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[5] + '</td>';
+    result += '    </tr>';
+    result += '  </tbody>';
+    result += '</table>';
+    return result;
+}
+
+function card_element_40k10e_weapon_stats_header(params, card_data, options) {
+    var card_font_size_class = card_size_class(card_data, options);
+
+    var result = "";
+    result += '<table class="card-stats' + card_font_size_class + '">';
+    result += '    <tbody><tr>';
+    result += '      <th class="wh40k-weapon-card-stats-header">R</th>';
+    result += '      <th class="wh40k-weapon-card-stats-header">A</th>';
+    result += '      <th class="wh40k-weapon-card-stats-header">WS</th>';
+    result += '      <th class="wh40k-weapon-card-stats-header">S</th>';
+    result += '      <th class="wh40k-weapon-card-stats-header">AP</th>';
+    result += '      <th class="wh40k-weapon-card-stats-header">D</th>';
+    result += '    </tr>';
+    return result;
+}
+
+
+function card_element_40k10e_weapon_stats(params, card_data, options) {
+    var card_font_size_class = card_size_class(card_data, options);
+
+    var result = "";
+    result += '    <tr>';
+    result += '    <td colspan="6">';
+    result += '      <h4 class="card-property-name">' + params[0] + '</h4>';
+    result += '      <p class="card-p card-property-text">' + params[1] + '</p>';
+    result += '    </td>';
+    result += '    </tr>';
+    result += '    <tr>';
+    result += '      <td class="card-stats-cell">' + params[2] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[3] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[4] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[5] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[6] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[7] + '</td>';
+    result += '    </tr>';
+    return result;
+}
+
+function card_element_40k10e_weapon_stats_footer(params, card_data, options) {
+    var card_font_size_class = card_size_class(card_data, options);
+
+    var result = "";
+    result += '  </tbody>';
+    result += '</table>';
+    return result;
+}
+
+
+function card_element_bloodbowlstats(params, card_data, options) {
+    var card_font_size_class = card_size_class(card_data, options);
+
+    var result = "";
+    result += '<table class="card-stats' + card_font_size_class + '">';
+    result += '    <tbody><tr>';
+    result += '      <th class="bb-card-stats-header">MA</th>';
+    result += '      <th class="bb-card-stats-header">ST</th>';
+    result += '      <th class="bb-card-stats-header">AG</th>';
+    result += '      <th class="bb-card-stats-header">PA</th>';
+    result += '      <th class="bb-card-stats-header">AV</th>';
+    result += '    </tr>';
+    result += '    <tr>';
+    result += '      <td class="card-stats-cell">' + params[0] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[1] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[2] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[3] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[4] + '</td>';
+    result += '    </tr>';
+    result += '  </tbody>';
+    result += '</table>';
+    return result;
+}
+
+function card_element_towstats(params, card_data, options) {
+    var card_font_size_class = card_size_class(card_data, options);
+
+    var result = "";
+    result += '<table class="card-stats' + card_font_size_class + '">';
+    result += '    <tbody><tr>';
+    result += '      <th class="tow-card-stats-header">M</th>';
+    result += '      <th class="tow-card-stats-header">WS</th>';
+    result += '      <th class="tow-card-stats-header">BS</th>';
+    result += '      <th class="tow-card-stats-header">S</th>';
+    result += '      <th class="tow-card-stats-header">T</th>';
+    result += '      <th class="tow-card-stats-header">W</th>';
+    result += '      <th class="tow-card-stats-header">I</th>';
+    result += '      <th class="tow-card-stats-header">A</th>';
+    result += '      <th class="tow-card-stats-header">Ld</th>';
+    result += '    </tr>';
+    result += '    <tr>';
+    result += '      <td class="card-stats-cell">' + params[0] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[1] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[2] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[3] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[4] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[5] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[6] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[7] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[8] + '</td>';
+    result += '    </tr>';
+    result += '  </tbody>';
+    result += '</table>';
+    return result;
+}
+
+function card_element_towweaponstats(params, card_data, options) {
+    var card_font_size_class = card_size_class(card_data, options);
+
+    var result = "";
+    result += '<table class="card-stats' + card_font_size_class + '">';
+    result += '    <tbody><tr>';
+    result += '      <th class="tow-card-stats-header">R</th>';
+    result += '      <th class="tow-card-stats-header">S</th>';
+    result += '      <th class="tow-card-stats-header">AP</th>';
+    result += '      <th class="tow-card-weapon-sr-stats-header">Special Rules</th>';
+    result += '    </tr>';
+    result += '    <tr>';
+    result += '      <td class="card-stats-cell">' + params[0] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[1] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[2] + '</td>';
+    result += '      <td class="card-stats-cell">' + params[3] + '</td>';
+    result += '    </tr>';
+    result += '  </tbody>';
+    result += '</table>';
+    return result;
+}
+
 function card_element_p2e_stats(params, card_data, options) {
     var result = "";
     result += '<div class="card-p2e-attribute-line">';
@@ -437,6 +589,14 @@ var card_element_generators = {
     boxes: card_element_boxes,
     description: card_element_description,
     dndstats: card_element_dndstats,
+	wh40k10estats: card_element_40k10e_stats,
+	wh40k10eweaponstats: card_element_40k10e_weapon_stats,
+	wh40k10eweaponstatsheader: card_element_40k10e_weapon_stats_header,
+	wh40k10eweaponstatsfooter: card_element_40k10e_weapon_stats_footer,
+    towweaponstats: card_element_towweaponstats,
+    towstats: card_element_towstats,
+    towweaponstats: card_element_towweaponstats,
+    bbstats: card_element_bloodbowlstats,
     p2e_stats: card_element_p2e_stats,
     p2e_start_trait_section: card_element_start_p2e_trait,
     p2e_trait: card_element_p2e_trait,

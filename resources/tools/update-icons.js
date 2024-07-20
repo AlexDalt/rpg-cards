@@ -1,5 +1,5 @@
 const fse = require('fs-extra');
-const request = require('request');
+const request = require( 'request' ).defaults({rejectUnauthorized:false});
 const path = require('path');
 const yauzl = require("yauzl");
 
